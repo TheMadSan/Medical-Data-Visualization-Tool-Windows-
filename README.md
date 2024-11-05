@@ -1,6 +1,6 @@
 # Medical Data Visualization Tool
 
-![alt_image][Images/arch.png]
+![alt_image](Images/arch.png)
 
 A high-performance Windows desktop application for real-time medical data visualization using C# and .NET Framework. This application demonstrates advanced WPF development with MVVM architecture, capable of processing and visualizing 1M+ data points per second while maintaining sub-50ms refresh rates.
 
