@@ -1,0 +1,21 @@
+using System.Windows;
+using MedicalDataVisualization.Views;
+using MedicalDataVisualization.ViewModels;
+
+namespace MedicalDataVisualization
+{
+    public partial class App : Application
+    {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            var mainWindow = new MainWindow
+            {
+                DataContext = new MainViewModel()
+            };
+
+            mainWindow.Show();
+        }
+    }
+}
