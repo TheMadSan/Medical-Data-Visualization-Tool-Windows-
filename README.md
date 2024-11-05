@@ -68,6 +68,7 @@ cd medical-data-visualization
 
 # Restore NuGet packages
 dotnet restore
+```
 
 
 ## Building the Project
@@ -78,13 +79,13 @@ dotnet build
 
 # Run the application
 dotnet run --project MedicalDataVisualization
-
+```
 
 ## Running Tests
 
 ```bash
 dotnet test
-
+```
 
 ## 📊 Performance Metrics
 
@@ -104,7 +105,7 @@ public class DataStreamConfig
     public int BufferSize { get; set; } = 10000;
     public bool IsEnabled { get; set; } = true;
 }
-
+```
 ## 📝 Code Style
 
 This project follows Microsoft's C# coding conventions and StyleCop rules. Key points:
@@ -128,7 +129,7 @@ Run tests using:
 dotnet test --filter "Category=Unit"
 dotnet test --filter "Category=Integration"
 dotnet test --filter "Category=Performance"
-
+```
 
 ## 📦 Dependencies
 
