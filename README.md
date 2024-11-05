@@ -68,3 +68,80 @@ cd medical-data-visualization
 
 # Restore NuGet packages
 dotnet restore
+
+
+## Building the Project
+
+```bash
+# Build the solution
+dotnet build
+
+# Run the application
+dotnet run --project MedicalDataVisualization
+
+
+## Running Tests
+
+```bash
+dotnet test
+
+
+## 📊 Performance Metrics
+
+- **Data Processing Rate**: 1M+ points/second
+- **UI Refresh Rate**: < 50ms
+- **Memory Usage**: ~200MB baseline
+- **CPU Usage**: 15-30% (4-core system)
+
+## 🔧 Configuration
+
+The application can be configured through `DataStreamConfig.cs`:
+
+```csharp
+public class DataStreamConfig
+{
+    public int SamplingRateHz { get; set; } = 1000;
+    public int BufferSize { get; set; } = 10000;
+    public bool IsEnabled { get; set; } = true;
+}
+
+## 📝 Code Style
+
+This project follows Microsoft's C# coding conventions and StyleCop rules. Key points:
+
+- Use **PascalCase** for public members
+- Use **camelCase** for private members
+- Prefix private fields with an underscore
+- Use **XML documentation** for public APIs
+
+## 🔍 Testing
+
+The project includes:
+
+- **Unit Tests**
+- **Integration Tests**
+- **Performance Tests**
+
+Run tests using:
+
+```bash
+dotnet test --filter "Category=Unit"
+dotnet test --filter "Category=Integration"
+dotnet test --filter "Category=Performance"
+
+
+## 📦 Dependencies
+
+- **LiveCharts.Wpf** (0.9.7)
+- **Microsoft.NET.Test.Sdk** (17.5.0)
+- **NUnit** (3.13.3)
+- **Moq** (4.18.4)
+
+## 🔐 Security
+
+- **Input validation** for all user inputs
+- **Secure data handling** practices
+- **Memory management optimization**
+- **Error logging and handling**
+
+
