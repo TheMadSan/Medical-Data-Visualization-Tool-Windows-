@@ -1,5 +1,44 @@
 # Medical Data Visualization Tool
 
+[Upflowchart TB
+    subgraph UI["User Interface Layer"]
+        MW["MainWindow.xaml"]
+        CV["ChartView.xaml"]
+    end
+
+    subgraph VM["ViewModel Layer"]
+        MVM["MainViewModel"]
+        CVM["ChartViewModel"]
+    end
+
+    subgraph Services["Services Layer"]
+        DGS["DataGeneratorService"]
+        DPS["DataProcessingService"]
+    end
+
+    subgraph Models["Model Layer"]
+        MDP["MedicalDataPoint"]
+        DSC["DataStreamConfig"]
+    end
+
+    subgraph DataFlow["Data Flow"]
+        Queue["ConcurrentQueue"]
+        Buffer["ProcessingBuffer"]
+    end
+
+    MW --> MVM
+    CV --> CVM
+    MVM --> DGS
+    MVM --> DPS
+    CVM --> DPS
+    DGS --> Queue
+    DPS --> Buffer
+    Queue --> DPS
+    DGS --> MDP
+    DGS --> DSC
+loading system-architecture.mermaid…]()
+
+
 A high-performance Windows desktop application for real-time medical data visualization using C# and .NET Framework. This application demonstrates advanced WPF development with MVVM architecture, capable of processing and visualizing 1M+ data points per second while maintaining sub-50ms refresh rates.
 
 ## 🚀 Features
